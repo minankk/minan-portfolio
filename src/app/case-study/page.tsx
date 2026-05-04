@@ -8,7 +8,7 @@ import Footer from "@/components/portfolio/Footer";
 
 export default function Home() {
   return (
-    <main className="bg-gradient-to-b from-white via-neutral-50 to-white min-h-screen">
+    <main className="bg-white">
 
       <Navbar />
 
