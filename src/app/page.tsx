@@ -1,14 +1,15 @@
 import Navbar from "@/components/portfolio/Navbar";
 import Hero from "@/components/portfolio/Hero";
 import CaseStudy from "@/components/portfolio/CaseStudy";
-import Experience from "@/components/portfolio/Experience";
+import Capabilities from "@/components/portfolio/Capabilities"; // Swapped import
 import Skills from "@/components/portfolio/Skills";
 import Contact from "@/components/portfolio/Contact";
 import Footer from "@/components/portfolio/Footer";
+import Philosophy from "@/components/portfolio/Philosophy";
 
 export default function Home() {
   return (
-    <main className="bg-gradient-to-b from-white via-neutral-50 to-white min-h-screen">
+    <main className="min-h-screen selection:bg-indigo-500/30 selection:text-indigo-200">
 
       <Navbar />
 
@@ -16,19 +17,20 @@ export default function Home() {
         <Hero />
       </div>
 
-      <section id="case-study" className="max-w-6xl mx-auto px-6 py-24 border-t border-neutral-100">
+      <section id="projects" className="max-w-6xl mx-auto px-6 py-24 border-t border-slate-800/50">
         <CaseStudy />
       </section>
 
-      <section id="experience" className="max-w-6xl mx-auto px-6 py-24 border-t border-neutral-100">
-        <Experience />
+      {/* Replaced Experience with Capabilities */}
+      <section id="capabilities" className="max-w-6xl mx-auto px-6 py-24 border-t border-slate-800/50">
+        <Capabilities />
       </section>
 
-      <section id="skills" className="max-w-6xl mx-auto px-6 py-24 border-t border-neutral-100">
+      <section id="skills" className="max-w-6xl mx-auto px-6 py-24 border-t border-slate-800/50">
         <Skills />
       </section>
 
-      <section id="contact" className="max-w-6xl mx-auto px-6 py-24 border-t border-neutral-200">
+      <section id="contact" className="max-w-6xl mx-auto px-6 py-24 border-t border-slate-800/50">
         <Contact />
       </section>
 

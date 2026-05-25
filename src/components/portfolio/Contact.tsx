@@ -1,52 +1,43 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function Contact() {
   return (
-    <section id="contact" className="mt-24 space-y-10">
+    <section className="py-32 md:py-48 bg-black text-white" id="contact">
+      <div className="max-w-4xl mx-auto text-center px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-neutral-500 mb-8">
+            Initiate
+          </p>
+          <h2 className="text-5xl md:text-8xl font-serif tracking-tight mb-12">
+            Let's <span className="text-neutral-500 italic font-light">Connect.</span>
+          </h2>
+          <p className="text-sm md:text-base font-sans text-neutral-400 max-w-lg mx-auto leading-relaxed mb-16">
+            Open to product, strategy, and engineering roles. If you are building systems that require both technical rigour and psychological insight, I would like to hear from you.
+          </p>
 
-      {/* header */}
-      <div>
-        <p className="text-sm uppercase tracking-widest text-indigo-500">
-          Contact
-        </p>
-
-        <h2 className="text-3xl font-bold mt-3">
-          Open to product, strategy & consulting roles
-        </h2>
-
-        <p className="mt-4 text-neutral-600 max-w-xl leading-relaxed">
-          I’m interested in roles that combine technical understanding with
-          problem solving, product thinking, and measurable impact.
-          If you’re working on something interesting, I’d be happy to connect.
-        </p>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 font-mono text-xs uppercase tracking-widest text-neutral-500">
+            <a href="mailto:your.email@example.com" className="hover:text-white transition-colors relative group py-2">
+              Email
+              <span className="absolute bottom-0 left-0 w-full h-px bg-white scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors relative group py-2">
+              LinkedIn
+              <span className="absolute bottom-0 left-0 w-full h-px bg-white scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+            </a>
+            <a href="https://github.com/minankk" target="_blank" rel="noreferrer" className="hover:text-white transition-colors relative group py-2">
+              GitHub
+              <span className="absolute bottom-0 left-0 w-full h-px bg-white scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+            </a>
+          </div>
+        </motion.div>
       </div>
-
-      {/* actions */}
-      <div className="flex flex-wrap gap-4">
-
-        <a
-          href="mailto:your.email@example.com"
-          className="px-5 py-3 rounded-lg bg-black text-white text-sm font-medium hover:bg-neutral-800 transition"
-        >
-          Email Me
-        </a>
-
-        <a
-          href="https://linkedin.com"
-          target="_blank"
-          className="px-5 py-3 rounded-lg border border-neutral-300 text-sm font-medium hover:border-neutral-500 transition"
-        >
-          LinkedIn
-        </a>
-
-        <a
-          href="https://github.com"
-          target="_blank"
-          className="px-5 py-3 rounded-lg border border-neutral-300 text-sm font-medium hover:border-neutral-500 transition"
-        >
-          GitHub
-        </a>
-
-      </div>
-
     </section>
   );
 }
