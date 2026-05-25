@@ -3,37 +3,24 @@
 @tailwind utilities;
 
 body {
-  @apply bg-black text-neutral-200 antialiased;
+  @apply bg-background text-text antialiased;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom font utilities mapping to Next.js variables */
-.font-serif {
-  font-family: var(--font-playfair), serif;
-}
-.font-sans {
-  font-family: var(--font-inter), sans-serif;
-}
-.font-mono {
-  font-family: var(--font-geist-mono), monospace;
-}
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
-
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: #0a0f1e;
 }
-
 ::-webkit-scrollbar-thumb {
-  background: #262626;
-  border-radius: 10px;
+  background: #1e2d4a;
+  border-radius: 4px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-  background: #404040;
+  background: #3b82f6;
 }

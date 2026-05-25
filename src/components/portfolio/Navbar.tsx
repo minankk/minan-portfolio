@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 export default function Navbar() {
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
@@ -9,44 +7,31 @@ export default function Navbar() {
   };
 
   return (
-    <motion.header
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-md border-b border-neutral-900/50 px-6 md:px-12 py-5 flex justify-between items-center"
-    >
-      {/* Brand Monogram */}
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border px-6 sm:px-12 lg:px-24 py-4 flex justify-between items-center">
+
       <div
-        className="font-serif text-xl italic text-white cursor-pointer hover:text-neutral-400 transition-colors"
+        className="font-bold text-xl text-text cursor-pointer hover:text-primary transition-colors flex items-center"
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       >
-        MK.
+        <span className="text-primary mr-0.5">M</span>K
       </div>
 
-      {/* Navigation Links & CV */}
-      <div className="flex items-center gap-8 md:gap-12">
-        <nav className="hidden md:flex gap-8 text-[10px] font-mono uppercase tracking-[0.3em] text-neutral-400">
-          <button onClick={() => scrollTo("capabilities")} className="hover:text-white transition-colors">
-            Capabilities
-          </button>
-          <button onClick={() => scrollTo("skills")} className="hover:text-white transition-colors">
-            Index
-          </button>
-          <button onClick={() => scrollTo("contact")} className="hover:text-white transition-colors">
-            Contact
-          </button>
-        </nav>
+      <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <button onClick={() => scrollTo("about")} className="hover:text-primary transition-colors">About</button>
+        <button onClick={() => scrollTo("skills")} className="hover:text-primary transition-colors">Skills</button>
+        <button onClick={() => scrollTo("projects")} className="hover:text-primary transition-colors">Projects</button>
+        <button onClick={() => scrollTo("experience")} className="hover:text-primary transition-colors">Experience</button>
+        <button onClick={() => scrollTo("contact")} className="hover:text-primary transition-colors">Contact</button>
+      </nav>
 
-        {/* Persistent CV Button */}
-        <a
-          href="/cv.pdf"
-          target="_blank"
-          rel="noreferrer"
-          className="px-4 py-2 border border-neutral-700 text-[10px] font-mono uppercase tracking-[0.2em] text-white hover:bg-white hover:text-black transition-colors duration-300"
-        >
-          View CV
-        </a>
+      <div className="hidden sm:flex items-center gap-2 border border-border px-3 py-1.5 rounded-full bg-card/50">
+        <span className="relative flex h-2 w-2">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        </span>
+        <span className="text-[10px] font-mono text-slate-300 uppercase tracking-wider">Available</span>
       </div>
-    </motion.header>
+
+    </header>
   );
 }

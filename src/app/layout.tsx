@@ -1,40 +1,32 @@
-import type { Metadata } from "next";
-import { Playfair_Display, Geist_Mono, Inter } from "next/font/google";
-import "./globals.css";
-
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-});
+import type { Metadata } from 'next'
+import { Inter, JetBrains_Mono } from 'next/font/google'
+import './globals.css'
 
 const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-jetbrains-mono',
+})
 
 export const metadata: Metadata = {
-  title: "Minan Kahai",
-  description: "Software Engineering meets Cognition.",
-};
+  title: 'Minan Kahai | Software Engineer & Product Thinker',
+  description: 'MSc Computer Science. BSc Psychology. I build things that work and understand why people use them.',
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html
-      lang="en"
-      className={`${playfair.variable} ${inter.variable} ${geistMono.variable} h-full antialiased bg-black`}
-    >
-      <body className="min-h-full flex flex-col bg-black text-neutral-200 font-sans selection:bg-white selection:text-black">
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans bg-background text-text antialiased selection:bg-primary selection:text-white flex flex-col min-h-screen`}>
         {children}
       </body>
     </html>
-  );
+  )
 }

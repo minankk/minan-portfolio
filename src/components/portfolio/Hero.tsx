@@ -1,76 +1,51 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex flex-col justify-center px-6 md:px-12 bg-black overflow-hidden">
+    <section
+      id="hero"
+      className="relative min-h-screen flex flex-col justify-center px-6 sm:px-12 lg:px-24 overflow-hidden pt-20"
+    >
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-primary/10 via-background to-background -z-10" />
 
-      <div className="max-w-6xl w-full mx-auto relative z-10">
-
-        {/* Top Minimalist Data */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-wrap items-center gap-4 md:gap-8 mb-10"
-        >
-          <div className="flex items-center gap-3">
-            <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
-            <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-neutral-400">
-              London, UK
-            </span>
-          </div>
-          <div className="hidden md:block h-px w-12 bg-neutral-800"></div>
-          <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-neutral-400">
-            Software & Strategy
+      <div className="max-w-4xl z-10">
+        <div className="inline-flex items-center space-x-3 mb-8">
+          <span className="relative flex h-2.5 w-2.5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
           </span>
-        </motion.div>
+          <span className="font-mono text-primary text-xs sm:text-sm tracking-widest uppercase">
+            Available for opportunities
+          </span>
+        </div>
 
-        {/* The Refined Name */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <h1 className="text-6xl md:text-8xl lg:text-[6.5rem] leading-[1.05] text-white font-serif tracking-tight mb-8">
-            Minan Kahai<span className="text-neutral-600">.</span>
-          </h1>
-        </motion.div>
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.1] tracking-tight mb-8">
+          <span className="block text-text">Engineer.</span>
+          <span className="block text-text">Product thinker.</span>
+          <span className="block text-primary">Built differently.</span>
+        </h1>
 
-        {/* The Pitch - Keeping it open for multiple roles */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="grid md:grid-cols-2 gap-12 mt-8 border-t border-neutral-900 pt-12"
-        >
-          <div>
-            <p className="text-2xl md:text-4xl font-serif text-neutral-300 leading-snug">
-              Bridging the gap between <span className="text-white italic">human behaviour</span> and technical execution.
-            </p>
-          </div>
-          <div className="flex flex-col gap-8">
-            <p className="text-sm md:text-base font-sans text-neutral-400 leading-relaxed max-w-md">
-              Fusing a background in Psychology with a Distinction-graded MSc in Computer Science. Architecting scalable backend infrastructure, agentic AI systems, and robust full-stack applications—always with a relentless focus on the end user and commercial growth.
-            </p>
+        <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mb-12 leading-relaxed">
+          MSc Computer Science. BSc Psychology. I build things that work and understand why people use them.
+        </p>
 
-            {/* Capabilities / Tags */}
-            <ul className="flex flex-wrap gap-3 text-[9px] md:text-[10px] font-mono uppercase tracking-[0.2em] text-neutral-500">
-              <li className="border border-neutral-800 px-4 py-2 rounded-full">Forward-Deployed Engineering</li>
-              <li className="border border-neutral-800 px-4 py-2 rounded-full">Product Growth</li>
-              <li className="border border-neutral-800 px-4 py-2 rounded-full">Backend Architecture</li>
-            </ul>
-          </div>
-        </motion.div>
-
+        <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
+          <a
+            href="#projects"
+            className="bg-primary hover:bg-blue-600 text-white font-medium py-3.5 px-8 rounded-lg transition-colors duration-200 shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_25px_rgba(59,130,246,0.5)]"
+          >
+            View my work
+          </a>
+          <a
+            href="#contact"
+            className="text-text hover:text-primary font-medium py-3.5 px-8 rounded-lg border border-border hover:border-primary transition-all duration-200 bg-card/50 backdrop-blur-sm"
+          >
+            Get in touch
+          </a>
+        </div>
       </div>
 
-      {/* Moody Film Texture - Kodak Portra aesthetic */}
-      <div className="pointer-events-none absolute inset-0 opacity-[0.04] mix-blend-screen bg-[url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E')]" />
-
-      {/* Subtle lighting gradient */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.04),transparent_60%)] pointer-events-none" />
+      <div className="absolute bottom-10 left-6 sm:left-12 lg:left-24 animate-pulse opacity-60">
+        <span className="block w-[1px] h-16 bg-gradient-to-b from-primary to-transparent"></span>
+      </div>
     </section>
   );
 }
