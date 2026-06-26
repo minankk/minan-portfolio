@@ -13,7 +13,7 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Minan Kahai | Software Engineer & Product Thinker',
+  title: 'Minan Kahai | Built Differently',
   description: 'MSc Computer Science. BSc Psychology. I build things that work and understand why people use them.',
 }
 
@@ -24,7 +24,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans bg-background text-text antialiased selection:bg-primary selection:text-white flex flex-col min-h-screen`}>
+      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans text-text antialiased flex flex-col min-h-screen`}>
+
+        {/* Global State Overlays */}
+        <div className="analog-overlay" />
+        <div className="film-grain" />
+
         {children}
       </body>
     </html>

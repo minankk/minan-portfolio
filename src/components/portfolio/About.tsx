@@ -4,59 +4,64 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section id="about" className="py-24 px-6 sm:px-12 lg:px-24 max-w-7xl mx-auto overflow-hidden">
-      <div className="flex flex-col lg:flex-row gap-16 items-start">
+    <section id="about" className="relative w-full py-32 px-6 sm:px-12 lg:px-24 flex justify-center z-10">
+      <div className="max-w-7xl w-full flex flex-col md:flex-row gap-16 md:gap-24 items-start">
 
-        {/* Left Column: Image/Visual Placeholder */}
+        {/* Left Column: The Anchor */}
         <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full lg:w-1/3 aspect-[4/5] relative rounded-2xl overflow-hidden bg-card border border-border group"
-        >
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-50 group-hover:opacity-75 transition-opacity duration-500"></div>
-          <div className="absolute inset-0 flex items-center justify-center text-slate-500 font-mono text-sm uppercase tracking-widest">
-            [Headshot]
-          </div>
-        </motion.div>
-
-        {/* Right Column: Copy & Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full lg:w-2/3 flex flex-col justify-center"
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="md:w-1/3 flex flex-col md:sticky md:top-32"
         >
-          <h2 className="text-3xl font-bold mb-8 text-text">The Intersection</h2>
+          <p className="font-mono text-[10px] uppercase tracking-[0.4em] text-[#d2a050] mb-6">
+            01. The Context
+          </p>
+          <h3 className="text-3xl md:text-4xl font-serif text-white tracking-tight leading-[1.2]">
+            Bridging the gap between <span className="italic text-neutral-400">behaviour</span> and <span className="italic text-neutral-400">architecture.</span>
+          </h3>
+        </motion.div>
 
-          <div className="space-y-6 text-slate-400 leading-relaxed text-lg mb-12">
-            <p>
-              I have a Computer Science MSc and a Psychology BSc. Most people pick one. I think the combination is more interesting — it means I can build the thing and understand the person using it. That shows up in everything from how I design systems to how I run user research to how I communicate across teams.
+        {/* Right Column: The Story & Footer */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          className="md:w-2/3 flex flex-col"
+        >
+          {/* The Narrative */}
+          <div className="flex flex-col gap-8 text-lg md:text-xl font-sans leading-relaxed text-neutral-400">
+            <p className="text-neutral-300">
+              I spent four years decoding <strong className="text-white font-medium">human cognition</strong> before pivoting to technology. I realised the industry often suffers from a critical disconnect: we build incredibly robust systems, but fail to account for the <strong className="text-[#d2a050] font-medium">psychology of the end user</strong>.
             </p>
+
             <p>
-              I build full-stack software, design data pipelines, work with AI systems, and lead product delivery. I have shipped production code for platforms serving 100,000+ users, built and deployed VR research platforms on Meta Quest hardware, trained ML models on 45,000-sample datasets, and led engineering teams from brief to launch.
+              Whether I am architecting <strong className="text-neutral-200 font-medium">scalable full-stack platforms</strong> from the ground up, or developing <strong className="text-neutral-200 font-medium">award-winning research</strong> on empathetic virtual agents using a novel, rule-based <strong className="text-[#d2a050] font-medium">SKG Model</strong> in Unity, my goal remains the same.
             </p>
-            <p>
-              I am looking for roles at the intersection of engineering and product — places where technical depth and human understanding both matter. I am immediately available and based in London.
+
+            <p className="font-serif italic text-white/90 mt-2">
+              The architecture must be clean, the pipelines must scale, but the final product must intuitively make sense to a human being.
             </p>
           </div>
 
-          {/* Hard Metrics Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-border">
-            <motion.div whileHover={{ scale: 1.05 }} className="transition-transform">
-              <p className="text-3xl font-bold text-primary mb-1">5+</p>
-              <p className="text-sm font-mono text-slate-500 uppercase tracking-wider">Projects shipped</p>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.05 }} className="transition-transform">
-              <p className="text-3xl font-bold text-primary mb-1">100k+</p>
-              <p className="text-sm font-mono text-slate-500 uppercase tracking-wider">Daily users impacted</p>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.05 }} className="transition-transform">
-              <p className="text-3xl font-bold text-primary mb-1">0.93</p>
-              <p className="text-sm font-mono text-slate-500 uppercase tracking-wider">ML accuracy achieved</p>
-            </motion.div>
+          {/* Sleek Horizontal Metadata Footer */}
+          <div className="mt-16 pt-8 border-t border-neutral-900 grid grid-cols-2 sm:grid-cols-3 gap-8">
+            <div className="flex flex-col gap-2">
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-neutral-600">Core Focus</span>
+              <span className="text-base md:text-lg text-white font-serif italic">Affective Computing</span>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-neutral-600">Design Ethos</span>
+              <span className="text-base md:text-lg text-white font-serif italic">Empathetic Engineering</span>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-neutral-600">Current Interest</span>
+              <span className="text-base md:text-lg text-white font-serif italic">"Physical AI"</span>
+            </div>
           </div>
         </motion.div>
 

@@ -2,12 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg-color: #000000;
+}
+
+/* When the toggle is clicked, this variable shifts */
+html.analog-mode {
+  --bg-color: #0c0b0a;
+}
+
 body {
-  @apply bg-background text-text antialiased;
+  @apply text-white antialiased;
+  background-color: var(--bg-color);
+  transition: background-color 0.8s ease;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* 1. The Warm Film Tint Overlay (Safe for stacking contexts) */
+.analog-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  background: #7a5c32; /* Warm amber/sepia tint */
+  mix-blend-mode: color;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+html.analog-mode .analog-overlay {
+  opacity: 0.2;
+}
+
+/* 2. The Film Grain Texture */
+.film-grain {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+html.analog-mode .film-grain {
+  opacity: 0.12;
 }
 
 /* Custom Scrollbar */
@@ -15,12 +57,13 @@ html {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0f1e;
+  background: var(--bg-color);
+  transition: background-color 0.8s ease;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e2d4a;
+  background: #171717;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3b82f6;
+  background: #333333;
 }

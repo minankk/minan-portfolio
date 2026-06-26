@@ -3,90 +3,126 @@
 import { motion } from "framer-motion";
 
 export default function Experience() {
-  const experiences = [
-    {
-      title: "Software Development Intern",
-      subtitle: "Skandiam Technologies",
-      desc: "Worked on the aosphere platform serving 120,000+ daily users, collaborating directly with Allen & Overy on production features. Delivered measurable performance improvements across SQL, server optimisation, and front-end development within a professional Agile team."
-    },
-    {
-      title: "Peptide Research Pipeline",
-      subtitle: "Academic Research Project",
-      desc: "End-to-end data science project on a real-world biological dataset. Built, trained, and validated an ML classification pipeline from scratch."
-    }
-  ];
-
-  const education = [
-    {
-      title: "MSc Computer Science — Distinction",
-      subtitle: "BCS Accredited | Highest dissertation mark in cohort"
-    },
-    {
-      title: "BSc Psychology — First Class Honours",
-      subtitle: "BPS Certified | Research methodologies, statistical analysis, human behaviour"
-    }
-  ];
-
   return (
-    <section id="experience" className="py-24 px-6 sm:px-12 lg:px-24 max-w-7xl mx-auto border-t border-border/50">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6 }}
-        className="mb-16"
-      >
-        <h2 className="text-3xl font-bold text-text">Experience & Education</h2>
-      </motion.div>
+    <section id="experience" className="relative w-full py-32 px-6 sm:px-12 lg:px-24 flex justify-center z-10 border-t border-neutral-900">
+      <div className="max-w-7xl w-full flex flex-col md:flex-row gap-16 md:gap-24 items-start">
 
-      <div className="relative border-l border-border/50 ml-4 md:ml-6 space-y-16">
-
-        {/* Experience Entries */}
-        {experiences.map((exp, index) => (
-          <motion.div
-            key={exp.title}
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
-            className="relative pl-8 md:pl-12"
-          >
-            <div className="absolute w-4 h-4 bg-background border-2 border-primary rounded-full -left-[9px] top-1"></div>
-            <div className="mb-2">
-              <h3 className="text-xl font-bold text-text">{exp.title}</h3>
-              <p className="text-sm font-mono text-primary uppercase tracking-widest mt-1">{exp.subtitle}</p>
-            </div>
-            <p className="text-slate-400 leading-relaxed max-w-3xl">
-              {exp.desc}
+        {/* Left Column: Sticky Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="md:w-1/3 flex flex-col gap-6 md:sticky md:top-40"
+        >
+          <div className="flex items-center gap-6">
+            <p className="font-mono text-[10px] uppercase tracking-[0.4em] text-[#d2a050]">
+              03. Credentials
             </p>
-          </motion.div>
-        ))}
+            <div className="h-[1px] flex-1 bg-neutral-900 max-w-xs" />
+          </div>
+          <h3 className="text-4xl md:text-5xl font-serif text-white tracking-tight leading-[1.1]">
+            Academic <br />
+            <span className="italic text-neutral-500">Excellence.</span>
+          </h3>
+        </motion.div>
 
-        {/* Divider for Education */}
-        <div className="relative pl-8 md:pl-12 pt-8">
-           <div className="absolute w-8 h-px bg-border/50 -left-4 top-8"></div>
+        {/* Right Column: The Ledger */}
+        <div className="md:w-2/3 flex flex-col gap-24 pt-2">
+
+          {/* Education Block */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+            className="flex flex-col gap-8"
+          >
+            <div className="flex flex-col gap-2 border-b border-neutral-900 pb-4">
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-neutral-600">Education</span>
+            </div>
+
+            <div className="flex flex-col gap-12">
+              <div className="flex flex-col gap-2 group">
+                <h4 className="text-2xl font-serif text-white group-hover:text-[#d2a050] transition-colors duration-500">MSc Computer Science | Distinction</h4>
+                <span className="text-sm font-mono text-neutral-400 uppercase tracking-widest">BCS Accredited</span>
+                <span className="text-base text-neutral-500 italic mt-1 max-w-3xl">Achieved highest dissertation mark in cohort.</span>
+              </div>
+
+              <div className="flex flex-col gap-2 group">
+                <h4 className="text-2xl font-serif text-white group-hover:text-[#d2a050] transition-colors duration-500">BSc Psychology</h4>
+                <span className="text-sm font-mono text-neutral-400 uppercase tracking-widest">BPS Accredited</span>
+                <span className="text-base text-neutral-500 italic mt-1 max-w-3xl">Focus on research methodologies, statistical analysis, and human behaviour.</span>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Certifications Block */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="flex flex-col gap-8"
+          >
+            <div className="flex flex-col gap-2 border-b border-neutral-900 pb-4">
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-neutral-600">Certifications</span>
+            </div>
+
+            <div className="flex flex-col gap-10">
+              {/* 01 */}
+              <div className="flex items-start gap-5 group">
+                <span className="font-mono text-[#d2a050] text-sm mt-1.5 shrink-0">01 /</span>
+                <div className="flex flex-col gap-1 w-full">
+                  <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+                    <h4 className="text-xl font-serif text-white group-hover:text-[#d2a050] transition-colors duration-500">CMI Level 7 Award in Strategic Management</h4>
+                    <span className="font-mono text-xs text-neutral-500 tracking-widest uppercase shrink-0">Dec 2024</span>
+                  </div>
+                  <span className="text-sm font-mono text-neutral-400 uppercase tracking-widest">Chartered Management Institute</span>
+                  <span className="text-base text-neutral-500 italic mt-1 max-w-3xl">Master’s-level qualification focused on navigating ambiguity, resource allocation, and delivering complex projects under pressure.</span>
+                </div>
+              </div>
+
+              {/* 02 */}
+              <div className="flex items-start gap-5 group">
+                <span className="font-mono text-[#d2a050] text-sm mt-1.5 shrink-0">02 /</span>
+                <div className="flex flex-col gap-1 w-full">
+                  <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+                    <h4 className="text-xl font-serif text-white group-hover:text-[#d2a050] transition-colors duration-500">Full Stack Web Development Bootcamp</h4>
+                    <span className="font-mono text-xs text-neutral-500 tracking-widest uppercase shrink-0">May 2024</span>
+                  </div>
+                  <span className="text-sm font-mono text-neutral-400 uppercase tracking-widest">Le Wagon</span>
+                  <span className="text-base text-neutral-500 italic mt-1 max-w-3xl">Ruby on Rails, JavaScript, PostgreSQL, Git, RSpec</span>
+                </div>
+              </div>
+
+              {/* 03 */}
+              <div className="flex items-start gap-5 group">
+                <span className="font-mono text-[#d2a050] text-sm mt-1.5 shrink-0">03 /</span>
+                <div className="flex flex-col gap-1 w-full">
+                  <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+                    <h4 className="text-xl font-serif text-white group-hover:text-[#d2a050] transition-colors duration-500">AI on Jetson Nano</h4>
+                    <span className="font-mono text-xs text-neutral-500 tracking-widest uppercase shrink-0">Dec 2024</span>
+                  </div>
+                  <span className="text-sm font-mono text-neutral-400 uppercase tracking-widest">Nvidia Deep Learning Institute</span>
+                </div>
+              </div>
+
+              {/* 04 */}
+              <div className="flex items-start gap-5 group">
+                <span className="font-mono text-[#d2a050] text-sm mt-1.5 shrink-0">04 /</span>
+                <div className="flex flex-col gap-1 w-full">
+                  <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+                    <h4 className="text-xl font-serif text-white group-hover:text-[#d2a050] transition-colors duration-500">Fundamentals of Computing and Programming</h4>
+                    <span className="font-mono text-xs text-neutral-500 tracking-widest uppercase shrink-0">Dec 2023</span>
+                  </div>
+                  <span className="text-sm font-mono text-neutral-400 uppercase tracking-widest">NYU (New York University)</span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
         </div>
-
-        {/* Education Entries */}
-        {education.map((edu, index) => (
-          <motion.div
-            key={edu.title}
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.2 + (index * 0.2) }}
-            className="relative pl-8 md:pl-12"
-          >
-            <div className="absolute w-3 h-3 bg-border rounded-full -left-[6.5px] top-1.5"></div>
-            <div className="mb-1">
-              <h3 className="text-lg font-bold text-slate-200">{edu.title}</h3>
-            </div>
-            <p className="text-sm font-mono text-slate-500 uppercase tracking-widest">
-              {edu.subtitle}
-            </p>
-          </motion.div>
-        ))}
-
       </div>
     </section>
   );

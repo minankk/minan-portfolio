@@ -1,51 +1,107 @@
+"use client";
+
+import { motion, useScroll, useTransform } from "framer-motion";
+
+const SKILLS = [
+  "Product Management", "Data Analysis", "Python", "SQL",
+  "React", "Node.js", "Agile / Scrum", "Product Strategy",
+  "User Research", "Systems Thinking", "Machine Learning", "Behavioural Science",
+];
+
 export default function Hero() {
+  const { scrollY } = useScroll();
+  const scrollIndicatorOpacity = useTransform(scrollY, [0, 100], [1, 0]);
+
   return (
-    <section
-      id="hero"
-      className="relative min-h-screen flex flex-col justify-center px-6 sm:px-12 lg:px-24 overflow-hidden pt-20"
-    >
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-primary/10 via-background to-background -z-10" />
+    <section className="relative min-h-screen flex flex-col justify-between pt-28 md:pt-32 pb-0 px-6 sm:px-12 lg:px-24 overflow-hidden">
 
-      <div className="max-w-4xl z-10">
-        <div className="inline-flex items-center space-x-3 mb-8">
-          <span className="relative flex h-2.5 w-2.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-          </span>
-          <span className="font-mono text-primary text-xs sm:text-sm tracking-widest uppercase">
-            Available for opportunities
-          </span>
-        </div>
+      <div className="max-w-7xl w-full mx-auto relative z-10 flex flex-col flex-1 mt-16 md:mt-24">
 
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.1] tracking-tight mb-8">
-          <span className="block text-text">Engineer.</span>
-          <span className="block text-text">Product thinker.</span>
-          <span className="block text-primary">Built differently.</span>
-        </h1>
+        {/* Top row — name + status */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+          className="flex justify-between items-start"
+        >
+          <h1 className="font-serif tracking-tighter text-white leading-[0.85] text-[clamp(72px,13vw,172px)]">
+            Minan<br />Kahai<span className="text-amber-500/80">.</span>
+          </h1>
 
-        <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mb-12 leading-relaxed">
-          MSc Computer Science. BSc Psychology. I build things that work and understand why people use them.
-        </p>
+          <div className="hidden md:flex flex-col items-end gap-3 mt-4">
+            <span className="text-xs font-mono uppercase tracking-[0.3em] text-neutral-500">
+              London, UK
+            </span>
+            <span className="text-xs font-mono uppercase tracking-[0.3em] text-emerald-500 flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              Available
+            </span>
+          </div>
+        </motion.div>
 
-        <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
-          <a
-            href="#projects"
-            className="bg-primary hover:bg-blue-600 text-white font-medium py-3.5 px-8 rounded-lg transition-colors duration-200 shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_25px_rgba(59,130,246,0.5)]"
-          >
-            View my work
-          </a>
-          <a
-            href="#contact"
-            className="text-text hover:text-primary font-medium py-3.5 px-8 rounded-lg border border-border hover:border-primary transition-all duration-200 bg-card/50 backdrop-blur-sm"
-          >
-            Get in touch
-          </a>
-        </div>
+        {/* Main hook */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-20 md:mt-32"
+        >
+          <h2 className="font-serif tracking-tight leading-[1.1] text-[clamp(32px,4.5vw,64px)] max-w-5xl">
+            <span className="text-white">Technical enough to build it.</span><br />
+            <span className="italic text-[#d2a050]/80">Human enough to know why it matters.</span>
+          </h2>
+        </motion.div>
+
+        {/* Credentials */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-12 md:mt-16 flex flex-col md:flex-row md:items-center gap-6 md:gap-12"
+        >
+          <p className="text-xs md:text-sm font-mono uppercase tracking-[0.2em] text-neutral-400 flex flex-wrap items-center gap-3 md:gap-4 leading-loose">
+            <span className="text-white">MSc Computer Science</span>
+            <span className="text-amber-500/50 hidden md:inline">/</span>
+            <span className="text-white">BSc Psychology</span>
+          </p>
+        </motion.div>
+
+        {/* Spacer */}
+        <div className="flex-1 min-h-[80px]" />
+
+        {/* Skills marquee - Now enclosed with top and bottom borders */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2, duration: 1.5 }}
+          className="overflow-hidden border-y border-neutral-900 py-6 md:py-8 mt-auto relative z-20"
+        >
+          <div className="flex w-max animate-[marquee_40s_linear_infinite]">
+            {[...SKILLS, ...SKILLS].map((skill, i) => (
+              <span key={i} className="flex items-center gap-6 pr-6">
+                <span className="text-[10px] md:text-xs font-mono uppercase tracking-[0.3em] text-neutral-500 whitespace-nowrap">
+                  {skill}
+                </span>
+                <span className="text-[#d2a050]/30 text-xs">/</span>
+              </span>
+            ))}
+          </div>
+        </motion.div>
+
       </div>
 
-      <div className="absolute bottom-10 left-6 sm:left-12 lg:left-24 animate-pulse opacity-60">
-        <span className="block w-[1px] h-16 bg-gradient-to-b from-primary to-transparent"></span>
-      </div>
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.6, duration: 1 }}
+        style={{ opacity: scrollIndicatorOpacity }}
+        className="fixed bottom-12 left-6 sm:left-12 lg:left-24 z-30 hidden sm:flex font-mono text-[10px] uppercase tracking-[0.3em] text-neutral-600 items-center gap-4"
+      >
+        <span className="w-10 h-[1px] bg-neutral-800" />
+        Scroll
+      </motion.div>
+
     </section>
   );
 }
