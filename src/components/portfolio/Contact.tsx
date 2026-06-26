@@ -9,7 +9,7 @@ export default function Contact() {
   const [terminalOpen, setTerminalOpen] = useState(false);
 
   return (
-    <section id="contact" className="py-32 px-6 sm:px-12 lg:px-24 max-w-4xl mx-auto text-center relative">
+ <section id="contact" className="py-32 px-6 sm:px-12 lg:px-24 max-w-4xl mx-auto text-center relative">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -18,7 +18,7 @@ export default function Contact() {
         className="mb-8"
       >
         <h2 className="text-4xl sm:text-5xl font-serif text-white mb-6">Let's talk.</h2>
-        <p className="text-sm font-sans text-neutral-400 leading-relaxed max-w-2xl mx-auto">
+        <p className="text-base md:text-lg font-sans text-neutral-400 leading-relaxed max-w-2xl mx-auto">
           Whether you are building a product, looking for a technical collaborator, or navigating your own path from psychology into technology, I am always open to a conversation.
           <br /><br />
           I enjoy sharing my experience with others making non-traditional moves into the industry. Feel free to reach out.
