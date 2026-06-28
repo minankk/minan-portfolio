@@ -22,7 +22,7 @@ export default function Navbar() {
         <button onClick={() => scrollTo("about")} className="hover:text-[#d2a050] transition-colors py-2 px-2">About</button>
         <button onClick={() => scrollTo("work")} className="hover:text-[#d2a050] transition-colors py-2 px-2">Work</button>
         <button onClick={() => scrollTo("experience")} className="hover:text-[#d2a050] transition-colors py-2 px-2">Credentials</button>
-        <button onClick={() => scrollTo("contact")} className="hover:text-[#d2a050] transition-colors py-2 px-2">Contact</button>
+        <button onClick={() => scrollTo("contact")} className="hover:text-[#d2a050] transition-colors py-2 px-2">Connect</button>
       </nav>
 
     </header>

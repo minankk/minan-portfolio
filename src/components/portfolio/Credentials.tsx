@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 
-export default function Experience() {
+export default function Crednetials() {
   return (
-    <section id="experience" className="relative w-full py-32 px-6 sm:px-12 lg:px-24 flex justify-center z-10 border-t border-neutral-900">
+    <section id="credentials" className="relative w-full py-32 px-6 sm:px-12 lg:px-24 flex justify-center z-10 border-t border-neutral-900">
       <div className="max-w-7xl w-full flex flex-col md:flex-row gap-16 md:gap-24 items-start">
 
         {/* Left Column: Sticky Section Header */}
@@ -27,7 +27,7 @@ export default function Experience() {
           </h3>
         </motion.div>
 
-        {/* Right Column: The Ledger */}
+        {/* Right Column: Education & Certifications */}
         <div className="md:w-2/3 flex flex-col gap-24 pt-2">
 
           {/* Education Block */}

@@ -46,22 +46,37 @@ export default function About() {
             </p>
           </div>
 
-          {/* Sleek Horizontal Metadata Footer */}
-          <div className="mt-16 pt-8 border-t border-neutral-900 grid grid-cols-2 sm:grid-cols-3 gap-8">
+          {/* Specs Matrix (Unified Grid) */}
+          <div className="mt-16 pt-8 border-t border-neutral-900 grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-12">
+
+            {/* Theory Stats */}
             <div className="flex flex-col gap-2">
               <span className="font-mono text-xs uppercase tracking-[0.2em] text-neutral-600">Core Focus</span>
               <span className="text-base md:text-lg text-white font-serif italic">Affective Computing</span>
             </div>
-
             <div className="flex flex-col gap-2">
               <span className="font-mono text-xs uppercase tracking-[0.2em] text-neutral-600">Design Ethos</span>
               <span className="text-base md:text-lg text-white font-serif italic">Empathetic Engineering</span>
             </div>
-
             <div className="flex flex-col gap-2">
               <span className="font-mono text-xs uppercase tracking-[0.2em] text-neutral-600">Current Interest</span>
               <span className="text-base md:text-lg text-white font-serif italic">"Physical AI"</span>
             </div>
+
+            {/* Delivery Stats */}
+            <div className="flex flex-col gap-2">
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-neutral-600">Delivery Scale</span>
+              <span className="text-base md:text-lg text-white font-serif italic">120K+ Users</span>
+            </div>
+            <div className="flex flex-col gap-2">
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-neutral-600">Empirical Validity</span>
+              <span className="text-base md:text-lg text-white font-serif italic">d = 2.32</span>
+            </div>
+            <div className="flex flex-col gap-2">
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-neutral-600">Product Leadership</span>
+              <span className="text-base md:text-lg text-white font-serif italic">14+ Months</span>
+            </div>
+
           </div>
         </motion.div>
 

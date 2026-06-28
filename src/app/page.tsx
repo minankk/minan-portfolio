@@ -2,7 +2,7 @@ import Navbar from "@/components/portfolio/Navbar";
 import Hero from "@/components/portfolio/Hero";
 import About from "@/components/portfolio/About";
 import Projects from "@/components/portfolio/Projects";
-import Experience from "@/components/portfolio/Experience";
+import Credentials from "@/components/portfolio/Credentials";
 import Contact from "@/components/portfolio/Contact";
 import GlobalBackground from "@/components/portfolio/GlobalBackground";
 
@@ -19,7 +19,7 @@ export default function Home() {
         <Hero />
         <About />
         <Projects />
-        <Experience />
+        <Credentials />
         <Contact />
       </div>
 
