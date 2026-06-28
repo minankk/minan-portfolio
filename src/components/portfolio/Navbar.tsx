@@ -17,11 +17,11 @@ export default function Navbar() {
         MK<span className="text-[#d2a050]">.</span>
       </div>
 
-      {/* Navigation Links (Right Aligned) */}
-      <nav className="hidden md:flex items-center gap-10 text-xs font-mono uppercase tracking-[0.2em] text-neutral-400 pointer-events-auto">
+      {/* Navigation Links (Right Aligned) - Updated to text-sm */}
+      <nav className="hidden md:flex items-center gap-10 text-sm font-mono uppercase tracking-[0.2em] text-neutral-400 pointer-events-auto">
         <button onClick={() => scrollTo("about")} className="hover:text-[#d2a050] transition-colors py-2 px-2">About</button>
         <button onClick={() => scrollTo("work")} className="hover:text-[#d2a050] transition-colors py-2 px-2">Work</button>
-        <button onClick={() => scrollTo("experience")} className="hover:text-[#d2a050] transition-colors py-2 px-2">Credentials</button>
+        <button onClick={() => scrollTo("credentials")} className="hover:text-[#d2a050] transition-colors py-2 px-2">Credentials</button>
         <button onClick={() => scrollTo("contact")} className="hover:text-[#d2a050] transition-colors py-2 px-2">Connect</button>
       </nav>
 
