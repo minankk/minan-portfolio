@@ -72,11 +72,11 @@ export default function Credentials() {
             <div className="flex flex-col gap-10">
               {/* 01 */}
               <div className="flex items-start gap-5 group">
-                <span className="font-mono text-[#d2a050] text-sm mt-1.5 shrink-0">01 /</span>
+                <span className="font-mono text-[#d2a050] text-sm mt-1.5 shrink-0">-</span>
                 <div className="flex flex-col gap-1 w-full">
                   <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
                     <h4 className="text-xl font-serif text-white group-hover:text-[#d2a050] transition-colors duration-500">CMI Level 7 Award in Strategic Management</h4>
-                    <span className="font-mono text-xs text-neutral-500 tracking-widest uppercase shrink-0">Dec 2024</span>
+                    {/* <span className="font-mono text-xs text-neutral-500 tracking-widest uppercase shrink-0">Dec 2024</span> */}
                   </div>
                   <span className="text-sm font-mono text-neutral-400 uppercase tracking-widest">Chartered Management Institute</span>
                   <span className="text-base text-neutral-500 italic mt-1 max-w-3xl">Master’s-level qualification focused on navigating ambiguity, resource allocation, and delivering complex projects under pressure.</span>
@@ -85,11 +85,11 @@ export default function Credentials() {
 
               {/* 02 */}
               <div className="flex items-start gap-5 group">
-                <span className="font-mono text-[#d2a050] text-sm mt-1.5 shrink-0">02 /</span>
+                <span className="font-mono text-[#d2a050] text-sm mt-1.5 shrink-0">-</span>
                 <div className="flex flex-col gap-1 w-full">
                   <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
                     <h4 className="text-xl font-serif text-white group-hover:text-[#d2a050] transition-colors duration-500">Full Stack Web Development Bootcamp</h4>
-                    <span className="font-mono text-xs text-neutral-500 tracking-widest uppercase shrink-0">May 2024</span>
+                    {/* <span className="font-mono text-xs text-neutral-500 tracking-widest uppercase shrink-0">May 2024</span> */}
                   </div>
                   <span className="text-sm font-mono text-neutral-400 uppercase tracking-widest">Le Wagon</span>
                   <span className="text-base text-neutral-500 italic mt-1 max-w-3xl">Ruby on Rails, JavaScript, PostgreSQL, Git, RSpec</span>
@@ -98,11 +98,11 @@ export default function Credentials() {
 
               {/* 03 */}
               <div className="flex items-start gap-5 group">
-                <span className="font-mono text-[#d2a050] text-sm mt-1.5 shrink-0">03 /</span>
+                <span className="font-mono text-[#d2a050] text-sm mt-1.5 shrink-0">-</span>
                 <div className="flex flex-col gap-1 w-full">
                   <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
                     <h4 className="text-xl font-serif text-white group-hover:text-[#d2a050] transition-colors duration-500">AI on Jetson Nano</h4>
-                    <span className="font-mono text-xs text-neutral-500 tracking-widest uppercase shrink-0">Dec 2024</span>
+                    {/* <span className="font-mono text-xs text-neutral-500 tracking-widest uppercase shrink-0">Dec 2024</span> */}
                   </div>
                   <span className="text-sm font-mono text-neutral-400 uppercase tracking-widest">Nvidia Deep Learning Institute</span>
                 </div>
@@ -110,11 +110,11 @@ export default function Credentials() {
 
               {/* 04 */}
               <div className="flex items-start gap-5 group">
-                <span className="font-mono text-[#d2a050] text-sm mt-1.5 shrink-0">04 /</span>
+                <span className="font-mono text-[#d2a050] text-sm mt-1.5 shrink-0">-</span>
                 <div className="flex flex-col gap-1 w-full">
                   <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
                     <h4 className="text-xl font-serif text-white group-hover:text-[#d2a050] transition-colors duration-500">Fundamentals of Computing and Programming</h4>
-                    <span className="font-mono text-xs text-neutral-500 tracking-widest uppercase shrink-0">Dec 2023</span>
+                    {/* <span className="font-mono text-xs text-neutral-500 tracking-widest uppercase shrink-0">Dec 2023</span> */}
                   </div>
                   <span className="text-sm font-mono text-neutral-400 uppercase tracking-widest">NYU (New York University)</span>
                 </div>

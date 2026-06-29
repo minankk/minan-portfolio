@@ -44,7 +44,7 @@ const PROJECTS = [
     label: "ML_PIPELINE",
     title: "Peptide Research",
     subtitle: "Data Science & Classification",
-    description: "Architected an end-to-end data science pipeline on a real-world biological dataset. Built, trained, and validated a machine learning classification model from scratch.",
+    description: "Architected an end-to-end data science pipeline on a real-world biological dataset. Built, trained and validated a machine learning classification model from scratch.",
     tech: ["Python", "Scikit-learn", "Pandas", "ML"],
     link: "https://github.com/minankk/peptide-research",
   },
@@ -53,7 +53,7 @@ const PROJECTS = [
     label: "SYS_ARCHITECTURE",
     title: "PlayOffPro",
     subtitle: "Wagering Platform",
-    description: "Designed and built a full-stack platform for competitive video game wagering. Implemented RESTful APIs, PostgreSQL schemas for financial transactions, and Docker containerisation.",
+    description: "Designed and built a full-stack platform for competitive video game wagering. Implemented RESTful APIs, PostgreSQL schemas for financial transactions and Docker containerisation.",
     tech: ["PostgreSQL", "Docker", "Ruby"],
     link: "https://github.com/vedl1/play_off_pro",
   }
