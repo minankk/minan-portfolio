@@ -61,9 +61,9 @@ export default function Contact() {
         className="mt-32 pt-8 border-t border-neutral-900 flex flex-col sm:flex-row items-center justify-between gap-8 relative"
       >
         <div className="text-neutral-600 font-mono text-[10px] uppercase tracking-[0.3em] flex flex-col sm:flex-row items-center gap-4">
-          <p>© {new Date().getFullYear()} Minan Kahai.</p>
+          <p>© {new Date().getFullYear()} Minan Kahai</p>
           <p className="flex items-center gap-2">
-            London <span className="w-1.5 h-1.5 rounded-full bg-neutral-600"></span> UK
+            <span className="w-1.5 h-1.5 rounded-full bg-neutral-600"></span>  All rights reserved
           </p>
         </div>
 
