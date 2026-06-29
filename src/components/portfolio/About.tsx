@@ -38,7 +38,7 @@ export default function About() {
             </p>
 
             <p>
-              Whether I am architecting <strong className="text-neutral-200 font-medium">scalable full-stack platforms</strong> from the ground up, or developing <strong className="text-neutral-200 font-medium">award-winning research</strong> on empathetic virtual agents using a novel, rule-based <strong className="text-[#d2a050] font-medium">SKG Model</strong> in Unity, my goal remains the same.
+              Whether I am architecting <strong className="text-neutral-200 font-medium">scalable full-stack platforms</strong> from the ground up, or developing <strong className="text-neutral-200 font-medium">award-winning research</strong> on empathetic virtual agents using a novel, rule-based <strong className="text-[#d2a050] font-medium">SKG Model</strong> in Unity, my goal remains the same:
             </p>
 
             <p className="font-serif italic text-white/90 mt-2">
