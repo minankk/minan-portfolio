@@ -25,7 +25,7 @@ export default function Hero() {
           className="flex justify-between items-start"
         >
           <h1 className="font-serif tracking-tighter text-white leading-[0.85] text-[clamp(72px,13vw,172px)]">
-            Minan K<br />
+            Minan<br />
             Kahai<span className="text-amber-500/80">.</span>
           </h1>
 
