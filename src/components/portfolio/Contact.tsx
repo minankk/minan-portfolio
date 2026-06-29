@@ -17,7 +17,7 @@ export default function Contact() {
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className="mb-8"
       >
-        <h2 className="text-4xl sm:text-5xl font-serif text-white mb-6">Let's talk ;)</h2>
+        <h2 className="text-4xl sm:text-5xl font-serif text-white mb-6">Let's talk</h2>
         <p className="text-base md:text-lg font-sans text-neutral-400 leading-relaxed max-w-2xl mx-auto">
           Whether you are building a product, looking for a technical collaborator, or navigating your own path from psych into tech, I am always open to a conversation.
           <br /><br />
