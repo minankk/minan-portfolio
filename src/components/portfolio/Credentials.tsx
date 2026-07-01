@@ -23,7 +23,7 @@ export default function Credentials() {
           </div>
           <h3 className="text-4xl md:text-5xl font-serif text-white tracking-tight leading-[1.1]">
             Academic <br />
-            <span className="italic text-neutral-500">Excellence.</span>
+            <span className="italic text-neutral-500">Excellence</span>
           </h3>
         </motion.div>
 

@@ -19,7 +19,7 @@ export default function About() {
             01. The Context
           </p>
           <h3 className="text-3xl md:text-4xl font-serif text-white tracking-tight leading-[1.2]">
-            Bridging the gap between <span className="italic text-neutral-400">behaviour</span> and <span className="italic text-neutral-400">architecture.</span>
+            Bridging the gap between <span className="italic text-neutral-400">behaviour</span> and <span className="italic text-neutral-400">architecture</span>
           </h3>
         </motion.div>
 

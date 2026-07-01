@@ -79,7 +79,7 @@ export default function Projects() {
             <div className="h-[1px] flex-1 bg-neutral-900 max-w-xs" />
           </div>
           <h3 className="text-4xl md:text-5xl font-serif text-white tracking-tight">
-            Proof of <span className="italic text-neutral-500">Concept.</span>
+            Proof of <span className="italic text-neutral-500">Concept</span>
           </h3>
         </motion.div>
 
